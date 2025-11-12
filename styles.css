@@ -1,0 +1,79 @@
+@font-face {
+    font-family: 'TT Norms Pro Mono Trl';
+    src: url('/assets/TTNormsProMonoTrl-Rg.woff2') format('woff2'),
+        url('/assets/TTNormsProMonoTrl-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'TT Norms Pro Mono Trl';
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    padding: 1rem;
+    margin: 0;
+
+    height: 100vh;
+
+    background-color: #F6D3D3;
+    background-image: url("/assets/Etch-a-sketch.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+}
+
+p {
+    margin: 0;
+}
+
+.flex-row {
+    display: flex;
+}
+
+
+.space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.choice {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-left: 1.5rem;
+
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.black {
+    background-color: black;
+}
+
+.grey {
+    background-color: gray;
+}
+
+.rainbow {
+    background: #F277E1;
+background: linear-gradient(344deg,rgba(242, 119, 225, 1) 0%, rgba(252, 106, 68, 1) 26%, rgba(86, 119, 255, 1) 57%, rgba(158, 203, 245, 1) 77%, rgba(237, 221, 83, 1) 100%);
+}
