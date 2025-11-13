@@ -3,6 +3,7 @@ const gridSizeButtons = document.querySelectorAll(".grid-size-choice");
 const gridColorButtons = document.querySelectorAll(".color-choice");
 const rainbowColors = ['#F6D3D3', '#671F2C', '#F16B30', '#DCCFBF', '#262221'];
 const clearButton = document.querySelector(".clear");
+const clearButtonMobile = document.querySelector(".clear-button")
 
 let currentGridSize = 16;
 let currentColorMode = 'black';
@@ -79,6 +80,10 @@ gridColorButtons.forEach(function(button) {
 })
 
 clearButton.addEventListener("click", function() {
+    createGrid(currentGridSize);
+})
+
+clearButtonMobile.addEventListener("click", function() {
     createGrid(currentGridSize);
 })
 
