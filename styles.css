@@ -213,4 +213,17 @@ button.grey {
         width: 90vw;
         height: 90vw;
     }
+
+    button.black {
+    background-color: black !important;
+}
+
+button.grey {
+    background-color: gray !important;
+}
+
+.rainbow {
+    background: #F6D3D3;
+    background: linear-gradient(254deg, rgba(246, 211, 211, 1) 0%, rgba(103, 31, 44, 1) 29%, rgba(241, 107, 48, 1) 57%, rgba(220, 207, 191, 1) 83%, rgba(38, 34, 33, 1) 100%);
+}
 }
