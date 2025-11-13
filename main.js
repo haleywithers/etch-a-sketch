@@ -19,15 +19,28 @@ function createGrid(size) {
         square.classList.add("grid-box");
 
         square.addEventListener("mouseenter", function() {
-            if (currentColorMode === 'rainbow') {
-                square.style.background = rainbowColors[rainbowIndex];
-                rainbowIndex = (rainbowIndex + 1) % rainbowColors.length;
-            } else {
-                square.style.background = currentColorMode;
+            colorSquare(square);
+        });
+
+        square.addEventListener('touchmove', function(e) {
+            e.preventDefault(); 
+            const touch = e.touches[0];
+            const element = document.elementFromPoint(touch.clientX, touch.clientY);
+            if (element && element.classList.contains('grid-box')) {
+                colorSquare(element);
             }
-        })
+        });
         
         gridCanvas.appendChild(square);
+    }
+}
+
+function colorSquare(square) {
+    if (currentColorMode === 'rainbow') {
+        square.style.background = rainbowColors[rainbowIndex];
+        rainbowIndex = (rainbowIndex + 1) % rainbowColors.length;
+    } else {
+        square.style.background = currentColorMode;
     }
 }
 
@@ -68,6 +81,14 @@ gridColorButtons.forEach(function(button) {
 clearButton.addEventListener("click", function() {
     createGrid(currentGridSize);
 })
+
+const settingsToggle = document.querySelector('.settings-toggle');
+const options = document.querySelector('.options');
+
+settingsToggle.addEventListener('click', function() {
+    options.classList.toggle('active');
+});
+
 
 
 

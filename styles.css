@@ -140,4 +140,59 @@ background: linear-gradient(344deg,rgba(242, 119, 225, 1) 0%, rgba(252, 106, 68,
 
 /*Mobile*/
 
-@media screen and (max-width: )
+.mobile-controls {
+    display: none;
+}
+
+@media screen and (max-width:767px) {
+    .mobile-controls {
+        display: flex;
+        justify-content: space-between;
+    }
+
+        .options {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        flex-direction: column;
+        z-index: 10;
+    }
+    
+    .options.active {
+        background-color: #F6D3D3;
+        border-bottom: 1px solid black;
+
+        padding: 1rem 0;
+        margin: 0 1rem;
+        
+        display: flex;
+        align-items: flex-start;
+        row-gap: 1.5rem;
+    }
+
+    .choice {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .clear-desktop {
+        display: none;
+    }
+
+    .settings-toggle, .clear-button {
+        background-color: transparent;
+        border: none;
+        font-family: 'TT Norms Pro Mono Trl';
+        font-size: 0.9rem;
+        text-transform: uppercase;
+    }
+
+    .canvas {
+        width: 90vw;
+        height: 90vw;
+    }
+}
