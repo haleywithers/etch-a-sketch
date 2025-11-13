@@ -22,7 +22,7 @@ body {
     position: relative;
 
     background-color: #F6D3D3;
-    background-image: url('assets/Etch-a-sketch.png');
+    background-image: url('https://raw.githubusercontent.com/haleywithers/etch-a-sketch/refs/heads/main/assets/Etch-a-sketch.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
