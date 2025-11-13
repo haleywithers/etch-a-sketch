@@ -1,7 +1,7 @@
 const gridCanvas = document.querySelector(".canvas");
 const gridSizeButtons = document.querySelectorAll(".grid-size-choice");
 const gridColorButtons = document.querySelectorAll(".color-choice");
-const rainbowColors = ['#F277E1', '#FC6A44', '#5677FF', '#9ECBF5', '#EDDD53'];
+const rainbowColors = ['#F6D3D3', '#671F2C', '#F16B30', '#DCCFBF', '#262221'];
 const clearButton = document.querySelector(".clear");
 
 let currentGridSize = 16;

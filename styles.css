@@ -86,8 +86,8 @@ header {
 }
 
 .rainbow {
-    background: #F277E1;
-background: linear-gradient(344deg,rgba(242, 119, 225, 1) 0%, rgba(252, 106, 68, 1) 26%, rgba(86, 119, 255, 1) 57%, rgba(158, 203, 245, 1) 77%, rgba(237, 221, 83, 1) 100%);
+    background: #F6D3D3;
+    background: linear-gradient(254deg, rgba(246, 211, 211, 1) 0%, rgba(103, 31, 44, 1) 29%, rgba(241, 107, 48, 1) 57%, rgba(220, 207, 191, 1) 83%, rgba(38, 34, 33, 1) 100%);
 }
 
 .canvas {
