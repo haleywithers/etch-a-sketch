@@ -11,34 +11,26 @@
         <div class="options flex-row space-between align-center">
             <div class="grid-size flex-row align-center">
                 <p>Choose Grid Size:</p>
-                <div class="choice grid-size-choice align-center justify-center">
-                    <p>4</p>
-                </div>
-                <div class="choice grid-size-choice align-center justify-center">
-                    <p>8</p>
-                </div>
-                <div class="choice grid-size-choice align-center justify-center">
-                    <p>16</p>
-                </div>
-                <div class="choice grid-size-choice align-center justify-center">
-                    <p>?</p>
-                </div>
+                <button class="choice grid-size-choice align-center justify-center">4</button>
+                <button class="choice grid-size-choice align-center justify-center">8</button>
+                <button class="choice grid-size-choice align-center justify-center">16</button>
+                <button class="choice grid-size-choice align-center justify-center">?</button>
             </div>
             <div class="colors flex-row align-center">
                  <p>Colour</p>
-                <div class="choice color-choice black"></div>
-                <div class="choice color-choice grey"></div>
-                <div class="choice color-choice rainbow"></div>
+                <button class="choice color-choice black" aria-label="Black color"></button>
+                <button class="choice color-choice grey" aria-label="Grey color"></button>
+                <button class="choice color-choice rainbow" aria-label="Rainbow colors"></button>
             </div>
-            <div class="clear">
-                <p>Clear</p>
-            </div>
+            <button class="clear">Clear</button>
         </div>
     </header>
-
-    <section class="canvas-holder">
-        <div class="canvas"></div>
-    </section>
+    <main>
+        <section class="canvas-holder">
+            <h1 class="visually-hidden">Etch-a-Sketch Drawing Tool</h1>
+            <div class="canvas" role="img" aria-label="Drawing canvas"></div>
+        </section>
+    </main>
 
     <script src="/main.js"></script>
 </body>

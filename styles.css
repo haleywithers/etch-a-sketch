@@ -70,6 +70,11 @@ header {
 
 .clear {
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-family: 'TT Norms Pro Mono Trl';
+    font-size: 0.9rem;
+    text-transform: uppercase;
 }
 
 .black {
@@ -112,3 +117,27 @@ background: linear-gradient(344deg,rgba(242, 119, 225, 1) 0%, rgba(252, 106, 68,
     min-width: 0;
     min-height: 0;
 }
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/*Tablets*/
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .canvas {
+        width: 75vw;
+        height: 75vw;
+    }
+}
+
+/*Mobile*/
+
+@media screen and (max-width: )
