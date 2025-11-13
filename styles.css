@@ -19,6 +19,7 @@ body {
     margin: 0;
 
     height: 100vh;
+    position: relative;
 
     background-color: #F6D3D3;
     background-image: url("/assets/Etch-a-sketch.png");
@@ -63,6 +64,12 @@ header {
 
     width: 2.5rem;
     height: 2.5rem;
+
+    cursor: pointer;
+}
+
+.clear {
+    cursor: pointer;
 }
 
 .black {
@@ -76,4 +83,32 @@ header {
 .rainbow {
     background: #F277E1;
 background: linear-gradient(344deg,rgba(242, 119, 225, 1) 0%, rgba(252, 106, 68, 1) 26%, rgba(86, 119, 255, 1) 57%, rgba(158, 203, 245, 1) 77%, rgba(237, 221, 83, 1) 100%);
+}
+
+.canvas {
+    width: 35vw;
+    height: 35vw;
+    
+    gap: 1px; 
+    background-color: black; 
+    padding: 1px; 
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+
+    display: grid;
+    gap: 1px;
+    background-color: black;
+    padding: 1px;
+}
+
+.grid-box {
+    box-sizing: border-box;
+    background-color: white;
+    min-width: 0;
+    min-height: 0;
 }

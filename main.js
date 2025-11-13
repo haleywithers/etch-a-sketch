@@ -1,0 +1,74 @@
+const gridCanvas = document.querySelector(".canvas");
+const gridSizeButtons = document.querySelectorAll(".grid-size-choice");
+const gridColorButtons = document.querySelectorAll(".color-choice");
+const rainbowColors = ['#F277E1', '#FC6A44', '#5677FF', '#9ECBF5', '#EDDD53'];
+const clearButton = document.querySelector(".clear");
+
+let currentGridSize = 16;
+let currentColorMode = 'black';
+let rainbowIndex = 0;
+
+function createGrid(size) {
+    gridCanvas.innerHTML = "";
+    
+    gridCanvas.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    gridCanvas.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+
+    for (let i = 0; i < (size * size); i++) {
+        const square = document.createElement("div");
+        square.classList.add("grid-box");
+
+        square.addEventListener("mouseenter", function() {
+            if (currentColorMode === 'rainbow') {
+                square.style.background = rainbowColors[rainbowIndex];
+                rainbowIndex = (rainbowIndex + 1) % rainbowColors.length;
+            } else {
+                square.style.background = currentColorMode;
+            }
+        })
+        
+        gridCanvas.appendChild(square);
+    }
+}
+
+gridSizeButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        let gridSize = button.textContent.trim();;
+        console.log("Button clicked! Text content:", gridSize); 
+
+        if (gridSize === "?") {
+            console.log("Question mark clicked!");
+            let randomSize = Math.floor(Math.random() * 17) + 4;
+            console.log("Random size generated:", randomSize);
+            currentGridSize = randomSize;
+            createGrid(randomSize);
+        } else {
+            gridSize = parseInt(gridSize);
+            currentGridSize = gridSize;
+            createGrid(gridSize);
+        }
+    });
+});
+
+gridColorButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        
+        if (button.classList.contains('black')) {
+            currentColorMode = 'black';
+        } else if (button.classList.contains('grey')) {
+            currentColorMode = 'gray';
+        } else if (button.classList.contains('rainbow')) {
+            currentColorMode = 'rainbow';
+        } 
+
+        
+    })
+})
+
+clearButton.addEventListener("click", function() {
+    createGrid(currentGridSize);
+})
+
+
+
+createGrid(16);
