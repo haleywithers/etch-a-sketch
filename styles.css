@@ -96,12 +96,12 @@ header {
     text-transform: uppercase;
 }
 
-.black {
-    background-color: black;
+button.black {
+    background-color: black !important;
 }
 
-.grey {
-    background-color: gray;
+button.grey {
+    background-color: gray !important;
 }
 
 .rainbow {
