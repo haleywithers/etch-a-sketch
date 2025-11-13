@@ -39,8 +39,8 @@ p {
 }
 
 button {
-    background-color: white;
-    color: black;
+    background-color: transparent !important;
+    color: black !important;
 }
 
 button {
