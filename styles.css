@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: -webkit-fill-available;
+}
+
 body {
     font-family: 'TT Norms Pro Mono Trl';
     text-transform: uppercase;
@@ -18,7 +22,9 @@ body {
     padding: 1rem;
     margin: 0;
 
+     height: 100vh;
     height: 100dvh;
+    height: -webkit-fill-available;
     position: relative;
 
     background-color: #F6D3D3;
@@ -34,6 +40,14 @@ p {
 
 button {
     background-color: white;
+    color: black;
+}
+
+button {
+    -webkit-appearance: none;
+    appearance: none;
+    background: none;
+    border: none;
     color: black;
 }
 
