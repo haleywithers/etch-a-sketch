@@ -80,7 +80,7 @@ gridColorButtons.forEach(function(button) {
 })
 
 
-clearButtons.forEach(function(button) {
+clearButton.forEach(function(button) {
     button.addEventListener("click", function() {
         createGrid(currentGridSize);
     });
