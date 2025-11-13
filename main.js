@@ -2,7 +2,7 @@ const gridCanvas = document.querySelector(".canvas");
 const gridSizeButtons = document.querySelectorAll(".grid-size-choice");
 const gridColorButtons = document.querySelectorAll(".color-choice");
 const rainbowColors = ['#F6D3D3', '#671F2C', '#F16B30', '#DCCFBF', '#262221'];
-const clearButton = document.querySelector(".clear");
+const clearButton = document.querySelectorAll(".clear");
 
 
 let currentGridSize = 16;
@@ -79,9 +79,12 @@ gridColorButtons.forEach(function(button) {
     })
 })
 
-clearButton.addEventListener("click", function() {
-    createGrid(currentGridSize);
-})
+
+clearButtons.forEach(function(button) {
+    button.addEventListener("click", function() {
+        createGrid(currentGridSize);
+    });
+});
 
 
 const settingsToggle = document.querySelector('.settings-toggle');
