@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'TT Norms Pro Mono Trl';
-    src: url('/assets/TTNormsProMonoTrl-Rg.woff2') format('woff2'),
-        url('/assets/TTNormsProMonoTrl-Rg.woff') format('woff');
+    src: url('assets/TTNormsProMonoTrl-Rg.woff2') format('woff2'),
+        url('assets/TTNormsProMonoTrl-Rg.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -22,7 +22,7 @@ body {
     position: relative;
 
     background-color: #F6D3D3;
-    background-image: url("/assets/Etch-a-sketch.png");
+    background-image: url("assets/Etch-a-sketch.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom;
