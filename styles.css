@@ -18,7 +18,7 @@ body {
     padding: 1rem;
     margin: 0;
 
-    height: 100vh;
+    height: 100dvh;
     position: relative;
 
     background-color: #F6D3D3;
@@ -30,6 +30,11 @@ body {
 
 p {
     margin: 0;
+}
+
+button {
+    background-color: white;
+    color: black;
 }
 
 .flex-row {
